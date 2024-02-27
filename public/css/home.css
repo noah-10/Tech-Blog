@@ -37,3 +37,52 @@ li.menu-item > a {
     color: var(--primary);
 }
 
+.login-container {
+    border: 1px solid red;
+    width: 75%;
+    height: 50vh;
+    margin: 75px auto 0 auto;
+    padding: 10px;
+}
+
+.login-form{
+    height: 100%;
+    /* border: 1px solid blue; */
+}
+
+.username-form, .password-form {
+    /* border: 1px solid green; */
+    padding: 15px 25px;
+    margin-bottom: 15px;
+}
+
+.username-form label, .password-form label {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.login-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.login-btn button{
+    width: 25%;
+}
+
+.sign-up-option{
+    text-align: right;
+    /* border: 1px solid green; */
+    padding: 15px 25px;
+}
+
+.sign-up-link{
+    text-decoration: none;
+    color: var(--primary);
+    
+}
+
+.sign-up-link p {
+    margin: auto 0;
+}

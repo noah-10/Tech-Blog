@@ -45,7 +45,7 @@ router.get('/blog/:id', async (req, res) => {
 
 //route for getting profile
 // ADD AUTH AND AN ATTRIBTE FOR EXCLUDING PASSWORD
-router.get('/profile', async (req, res) => {
+router.get('/dashboard', async (req, res) => {
     try{
         const userData = await User.findByPk(req.session.user_id, {
             include: {model: Blog}
@@ -53,7 +53,7 @@ router.get('/profile', async (req, res) => {
 
         const user = userData.get({ plain: true });
 
-        res.render('profile', {
+        res.render('dashboard', {
             ...user,
             logged_in: true
         });
@@ -67,7 +67,7 @@ router.get('/login', async (req, res) => {
 
     //If user is already logged in, then it will redirect them
     if(req.session.logged_in){
-        res.redirect('/profile')
+        res.redirect('/dashboard')
         return;
     }
 

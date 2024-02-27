@@ -58,3 +58,5 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.json({message: "Error with deleting blog", err});
     }
 })
+
+module.exports = router;
