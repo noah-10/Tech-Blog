@@ -1,0 +1,39 @@
+:root {
+    --primary: black;
+}
+
+header{
+    height: 100px;
+}
+
+nav.navbar{
+    margin: auto 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+a.navbar-logo{
+    color: var(--primary);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+ul.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+li.menu-item{
+    padding: 0 20px;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+li.menu-item > a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
