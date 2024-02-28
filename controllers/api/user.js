@@ -1,7 +1,7 @@
 // will contain post and logging out
 
 const router = require('express').Router();
-const { User } = require('../../models/User');
+const User = require('../../models/User');
 
 //Create user
 router.post('/', async (req, res) => {

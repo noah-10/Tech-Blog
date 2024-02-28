@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Blog } = require('../models');
+const withAuth = require("../utils/withAuth");
 // Require path files
 
 // Fetch for homepage
@@ -45,7 +46,7 @@ router.get('/blog/:id', async (req, res) => {
 
 //route for getting profile
 // ADD AUTH AND AN ATTRIBTE FOR EXCLUDING PASSWORD
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
     try{
         const userData = await User.findByPk(req.session.user_id, {
             include: {model: Blog}
