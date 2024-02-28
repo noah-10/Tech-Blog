@@ -30,9 +30,16 @@
             <li class="menu-item">
               <a href="/dashboard">Dashboard</a>
             </li>
-            <li class="menu-item">
-              <a href="/login">Login</a>
-            </li>
+            {{#if logged_in}}
+              <li class="menu-item">
+                <a href="/api/users/signout" id="signout">signout</a>
+              </li>
+            {{else}}
+              <li class="menu-item" id="login">
+                <a href="/login">Login</a>
+              </li>
+            {{/if}}
+
           </ul>
         </div>
       </nav>
@@ -43,6 +50,10 @@
     <footer class="footer-container">
 
     </footer>
+
+    {{#if logged_in}}
+      <script src="js/logout.js"></script>
+    {{/if}}
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
