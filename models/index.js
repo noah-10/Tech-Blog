@@ -13,6 +13,7 @@ Blog.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
+// User to comments association
 User.hasMany(Comment, {
     foreignKey: "user_id",
     onDelete: "CASCADE"
@@ -34,6 +35,5 @@ Comment.belongsToMany(Blog, {
         model: BlogComment,
     }
 });
-
 
 module.exports = { User, Blog, Comment, BlogComment};

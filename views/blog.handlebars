@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/blog.css" />
+<div class="container">
+  <div class="blog-container">
+    <h2 class="text-center my-5">{{blog.title}}</h2>
+    <div class="card mb-5 mx-5">
+      <div class="content">
+        <p>{{blog.content}}</p>
+      </div>
+      <div class="blog-info">
+        <p class="user">{{blog.user.username}}</p>
+        <p class="date">{{format_date blog.date_created}}</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="text-center mb-5">Comments</h2>
+  <div class="all-comments card">
+    {{#each blog.comments as |comment|}}
+      <div class="comments">
+        <div class="comment">
+          <p>{{comment.comment}}</p>
+        </div>
+        <div class="comment-info">
+          <p>{{comment.user.username}}</p>
+          <p>{{format_date comment.date_created}}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

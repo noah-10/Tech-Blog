@@ -26,7 +26,7 @@ BlogComment.init(
                 model: "blog",
                 key: "id"
             }
-        }
+        },
     },
     {
         sequelize,

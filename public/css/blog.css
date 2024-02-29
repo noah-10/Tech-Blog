@@ -1,0 +1,30 @@
+.card{
+    padding: 20px;
+}
+
+.content > p {
+    font-size: 20px;
+}
+
+.blog-info{
+    text-align: right;
+    display: inline;
+}
+
+p.user, p.date{
+    margin-bottom: 5px;
+}
+
+div.all-comments {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.comment > p {
+    font-size: 20px;
+}
+
+.comment-info{
+    text-align: right;
+    margin-bottom: 5px;
+}

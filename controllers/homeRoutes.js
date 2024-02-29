@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Blog } = require('../models');
+const { User, Blog, Comment } = require('../models');
 const withAuth = require("../utils/withAuth");
 // Require path files
 
@@ -30,13 +30,20 @@ router.get('/', async (req, res) => {
 router.get('/blog/:id', async (req, res) => {
     try{
         const blogData = await Blog.findByPk(req.params.id, {
-            include: {model: User}
+            include: [
+                {model: User},
+                {model: Comment, include: [User]}
+            ],
         })
+
+        if(!blogData){
+            res.json({message: "No blog found with this id!"});
+        }
 
         const blog = blogData.get({ plain: true });
 
         res.render('blog', {
-            ...blog,
+            blog,
             logged_in: req.session.logged_in
         });
     }catch(err){
