@@ -45,6 +45,10 @@ li.menu-item > a {
     padding: 10px;
 }
 
+#signout{
+    cursor: pointer;
+}
+
 .login-form, .sign-up-form{
     height: 100%;
     /* border: 1px solid blue; */
