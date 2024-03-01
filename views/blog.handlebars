@@ -26,4 +26,29 @@
       </div>
     {{/each}}
   </div>
+
+  <div class="comment-text new-comment-unactive mt-5">
+    <form class="comment-form" id="new-comment-form" data-types="{{blog.id}}">
+      <label for="newComment" class="form-label">New Comment:</label>
+      <input
+        type="text"
+        name="newComment"
+        id="newComment"
+        placeholder="Write a comment for {{blog.user.username}} blog"
+      />
+      <div class="new-comment-btn">
+        <button
+          type="submit"
+          class="btn btn-primary mt-3"
+          
+        >Post Comment</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="add-comment-btn mt-5">
+    <button type="button" class="btn btn-primary" id="comment-btn">Add Comment</button>
+  </div>
 </div>
+
+<script src="/js/comment.js"></script>

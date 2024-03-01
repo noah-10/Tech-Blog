@@ -28,3 +28,51 @@ div.all-comments {
     text-align: right;
     margin-bottom: 5px;
 }
+
+.comment-info > p {
+    margin-bottom: 5px;
+}
+
+.add-comment-btn, .new-comment-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.add-comment-btn button {
+    width: 20%;
+}
+
+/* .comment-text{
+} */
+
+.comment-form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.comment-form > input {
+    width: 50%;
+    text-align: center;
+    height: 50px;
+    font-size: 18px;
+}
+
+.form-label{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+.new-comment-active {
+    display: block;
+}
+
+.new-comment-unactive {
+    display: none;
+}
+
+.new-comment-btn button {
+    margin-bottom: 20px;
+}
