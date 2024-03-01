@@ -1,0 +1,22 @@
+.main-container{
+    height: 80vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.new-blog{
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.new-blog > button {
+    width: 35%;
+    height: 125%;
+    font-size: 110%;
+}

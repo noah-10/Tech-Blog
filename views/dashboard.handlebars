@@ -1,5 +1,22 @@
-<h2>{{user.username}}</h2>
+<link rel="stylesheet" href="/css/dashboard.css" />
 
-{{#each user.blog as |userBlog|}}
-    
-{{/each}}
+<h2 class="text-center">{{user.username}}</h2>
+<div class="container">
+  <div class="blog-container">
+    {{#each user.blog as |userBlog|}}
+      <div class="blog-container">
+        <div class="title">
+          <p>{{userBlog.title}}</p>
+        </div>
+        <div class="date">
+          <p>{{userBlog.date_created}}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+  <div class="new-blog">
+    <button type="button" class="btn btn-primary">New Blog</button>
+  </div>
+
+</div>
