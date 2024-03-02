@@ -1,19 +1,20 @@
 // Will contain post, put, delete for blogs
 const router = require('express').Router();
-const { Blog } = require('../../models/Blog');
+const {Blog} = require('../../models');
 const withAuth = require('../../utils/withAuth');
 
 //create new blog
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
     try{
         const newBlog = await Blog.create({
-            ...req.body,
+            title: req.body.title,
+            content: req.body.content,
             user_id: req.session.user_id
         });
 
         res.json(newBlog);
     }catch(err){
-        res.json({message: "Error with creating new blog"});
+        res.json({message: "Error with creating new blog" , err});
     }
 });
 

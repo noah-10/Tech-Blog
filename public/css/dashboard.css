@@ -8,6 +8,40 @@
     height: 100%;
 }
 
+.make-blog-container{
+    color: red;
+}
+
+.title-container, .content-container{
+    margin-bottom: 15px;
+}
+
+.title-container > label, .content-container > label {
+    font-size: 18px;
+}
+
+.content-container > textarea{
+    height: 125px;
+}
+
+.submit-blog{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-blog button {
+    width: 20%;
+}
+
+.make-blog-unactive{
+    display: none;
+}
+
+.make-blog-active{
+    display: block;
+}
+
 .new-blog{
     display: flex;
     justify-content: center;

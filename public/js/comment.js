@@ -15,8 +15,6 @@ const handleNewComment = async (event) => {
 
   const blogId = event.target.getAttribute("data-types");
   const comment = document.querySelector("#newComment").value.trim();
-  console.log(blogId);
-  console.log(comment);
 
   if (blogId && comment) {
     const response = await fetch(`/api/comment`, {
