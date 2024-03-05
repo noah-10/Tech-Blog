@@ -4,6 +4,7 @@ const loginFormHandler = async (event) => {
     const username = document.querySelector("#username-login").value.trim();
     const password = document.querySelector("#password-login").value.trim();
 
+    // Gets users info and sends to login route to check and validate
     if(username && password){
         const response = await fetch('/api/users/login', {
             method: 'POST',

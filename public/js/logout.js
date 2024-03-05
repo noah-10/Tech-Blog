@@ -1,4 +1,5 @@
 const logout = async () => {
+    //Creates a post request to sign user out
     const response =  await fetch('./api/users/logout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

@@ -5,6 +5,7 @@ const signupFormHandler = async (event) => {
   const email = document.querySelector("#signup-email").value.trim();
   const password = document.querySelector("#signup-password").value.trim();
 
+  // Gets new user info and sends to api route to create a new user in database
   if (username && email && password) {
     const response = await fetch("/api/users", {
       method: "POST",

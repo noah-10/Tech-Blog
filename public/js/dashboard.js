@@ -2,6 +2,7 @@ const newBlogBtn = document.querySelector(".new-blog");
 const allBlogs = document.querySelector(".all-blog-container");
 const makeBlogContainer = document.querySelector(".make-blog-container");
 
+//Removes unessesary elements and makes a new form display block
 const makeNewBlog = () => {
   newBlogBtn.style.display = "none";
   allBlogs.style.display = "none";
@@ -10,9 +11,11 @@ const makeNewBlog = () => {
   makeBlogContainer.classList.add("make-blog-active");
 };
 
+//For showing blog that is clicked
 const showBlog = async (event) => {
   const blogId = event.target.getAttribute("data-types");
 
+  // Fetches all of blogs info
   try {
     const response = await fetch(`/api/blogs/${blogId}`);
     const blogData = await response.json();
@@ -21,12 +24,13 @@ const showBlog = async (event) => {
 
       const updateContainer = document.querySelector(".update-blog-container");
 
+      // Adds the container containing a form to update blog
       updateContainer.classList.remove("update-blog-unactive");
       updateContainer.classList.add("update-blog-active");
 
+      //Removes unessesary elements and makes a new form display block
       newBlogBtn.style.display = "none";
       allBlogs.style.display = "none";
-      // const blogs = document.querySelectorAll(".blog-container")
 
       const title = blogData.title;
       const content = blogData.content;
@@ -46,13 +50,16 @@ const showBlog = async (event) => {
   }
 };
 
+// For creating a new blog
 const handleNewBlog = async (event) => {
   event.preventDefault();
 
+  // Gets all of the users inputs to create a blog
   const title = document.querySelector("#blog-title").value.trim();
   const content = document.querySelector("#blog-content").value.trim();
 
   if (title && content) {
+    // Sends to route to create blog
     const response = await fetch("/api/blogs", {
       method: "POST",
       body: JSON.stringify({ title, content }),
@@ -69,9 +76,11 @@ const handleNewBlog = async (event) => {
   }
 };
 
+// For updating blog
 const updateBlog = async (event) => {
   event.preventDefault();
 
+  // Get all values for updating a blog
   const blogId = document
     .querySelector("#update-blog-form")
     .getAttribute("data-type");
@@ -79,6 +88,7 @@ const updateBlog = async (event) => {
   const content = document.querySelector("#new-blog-content").value.trim();
 
   if (title && content) {
+    // Sends to route to make a put request
     const response = await fetch(`/api/blogs/${blogId}`, {
       method: "PUT",
       body: JSON.stringify({ title, content }),

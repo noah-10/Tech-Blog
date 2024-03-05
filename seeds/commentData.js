@@ -10,7 +10,7 @@ const commentData = [
         user_id: 2,
     },
     {
-        comment: "I did not know that",
+        comment: "I justt started learning about that too!",
         user_id: 3,
     }
 ]
