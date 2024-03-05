@@ -105,6 +105,26 @@ const updateBlog = async (event) => {
   }
 };
 
+const deleteBlog = async (event) => {
+  event.preventDefault();
+
+  const blogId = document
+    .querySelector("#update-blog-form")
+    .getAttribute("data-type");
+
+  const response = await fetch(`/api/blogs/${blogId}`,{
+    method: "DELETE"
+  });
+
+  if(response.ok){
+    location.reload();
+  }else{
+    console.log("Error with deleting blog");
+  }
+}
+
+document.querySelector(".delete-blog").addEventListener("click", deleteBlog);
+
 document
   .querySelector("#update-blog-form")
   .addEventListener("submit", updateBlog);

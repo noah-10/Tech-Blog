@@ -78,12 +78,12 @@ p{
     display: block;
 }
 
-.update-blog {
+.update-blog, .delete-blog {
     display: flex;
     justify-content: center;
 }
 
-.update-blog > button{
+.update-blog > button, .delete-blog > button{
     width: 25%;
 }
 
