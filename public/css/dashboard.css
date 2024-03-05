@@ -99,3 +99,13 @@ p{
     height: 125%;
     font-size: 110%;
 }
+
+@media screen and (max-width: 426px) {
+    .blog-container{
+        flex-direction: column;
+    }
+
+    .title, .date {
+        margin: 0 auto;
+    }
+}

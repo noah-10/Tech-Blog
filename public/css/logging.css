@@ -3,7 +3,6 @@
 }
 
 .login-container, .sign-up-container {
-    border: 1px solid red;
     width: 75%;
     height: 50vh;
     margin: 75px auto 0 auto;
@@ -71,4 +70,10 @@
     display: flex;
     justify-content: center;
     margin-top: 7px;
+}
+
+@media screen and (max-width: 426px) {
+    .login-container, .sign-up-container{
+        margin: 45px auto 0 auto;
+    }
 }

@@ -77,3 +77,9 @@ div.all-comments {
 .new-comment-btn button {
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 426px){
+    .add-comment-btn button {
+        width: 35%;
+    }
+}
