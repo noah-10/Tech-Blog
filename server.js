@@ -14,10 +14,10 @@ const PORT = process.env.PORT || 3011;
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ helpers });
 
-app.get('/favicon.ico', (req, res) => {
-  // Send a 404 Not Found response
-  res.status(404).end();
-});
+// app.get('/favicon.ico', (req, res) => {
+//   // Send a 404 Not Found response
+//   res.status(404).end();
+// });
 
 const sess = {
   secret: 'Super secret secret',
