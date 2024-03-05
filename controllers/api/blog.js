@@ -18,6 +18,23 @@ router.post('/', async (req, res) => {
     }
 });
 
+//Get a blog info to be able to delete or update
+router.get('/:id', async (req, res) => {
+    try{
+        const blogData = await Blog.findByPk(req.params.id);
+
+        if(!blogData){
+            res.json({ message: "No blog found with this id"})
+        };
+
+        const blog = blogData.get({ plain: true });
+
+        res.json(blog);
+    }catch(err){
+        res.json("Error with getting blog", err);
+    }
+})
+
 //Updating blogs
 router.put('/:id', withAuth, async (req, res) => {
     try{
