@@ -18,4 +18,4 @@
 
 ## Usage
 
-- You are able to view the web app with this [link](https://tech-talk-module-challenge-a1de8e13a149.herokuapp.com/)
+- You are able to view the web app with this [link](https://tech-talk1-61e755cfd1c2.herokuapp.com/)
